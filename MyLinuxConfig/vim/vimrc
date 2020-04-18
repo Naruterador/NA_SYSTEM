@@ -384,17 +384,23 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunctio
 
+"Run nerdtree automatically
+"autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+set rtp+=/root/.vim/plugged/YouCompleteMe
 
 call plug#begin('~/.vim/plugged')
 Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'kiteco/plugins'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
